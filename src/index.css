@@ -23,13 +23,13 @@ ol, ul {
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 60px;
+  height: 60px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 60px;
 }
 
 .square:focus {
@@ -41,8 +41,35 @@ ol, ul {
 }
 
 .game {
+  position: relative;
+  height: 281px;
+  width: 512px;
+  margin: 0 auto;
+  margin-top: 160px;
+  text-align: center;
+  background-color:cadetblue;
+  border-radius: 10px;
+}
+
+.game > .player{
+  position: absolute;
+  top: -21px;
+  left: 50%;
+  height: auto;
+  font-size: 30px;
+  transform: translateX(-50%);
+}
+
+.game > div{
+  display: inline-block;
+  height: 100%;
+}
+
+.game > div > div {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: 100%;
 }
 
 .game-info {
