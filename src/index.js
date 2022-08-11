@@ -53,9 +53,12 @@ class Game extends React.Component {
         }
       ],
       stepNumber: 0,
-      xIsNext: true
+      xIsNext: false
     };
   }
+
+// history가 1 이상이거나 게임이 종료되었을 때 game start 버튼 나타나기 
+// 기존버전, 수정버전 비교해서 노션정리 
 
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
@@ -79,7 +82,7 @@ class Game extends React.Component {
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: (step % 2) === 0
+      xIsNext: ((step % 2) === 1) //짝/홀수 구분 목적
     });
   }
 
